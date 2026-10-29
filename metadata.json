@@ -1,0 +1,8 @@
+{
+  "name": "G1 Tools",
+  "description": "High-throughput bioinformatics and computational genomics workbench featuring NCBI BLAST+, Multiple Sequence Alignment, Cladogram Phylogenetic Trees, I-Mutant ΔG Free Energy, and GEO2R Transcriptomic Profiling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

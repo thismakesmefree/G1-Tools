@@ -1,0 +1,441 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-display: 'Plus Jakarta Sans', var(--font-sans);
+
+  /* NVIDIA Signature Green (#76B900) mapped to primary accent tokens */
+  --color-cyan-50: #f3fee3;
+  --color-cyan-100: #e4fcc2;
+  --color-cyan-200: #c6f763;
+  --color-cyan-300: #9bec00;
+  --color-cyan-400: #8ed600;
+  --color-cyan-500: #76b900;
+  --color-cyan-600: #66a100;
+  --color-cyan-700: #4f7d00;
+  --color-cyan-800: #3a5c00;
+  --color-cyan-900: #263d00;
+  --color-cyan-950: #132000;
+
+  /* NVIDIA Secondary Bio-Green / Telemetry Lime-Emerald */
+  --color-emerald-50: #f2fce2;
+  --color-emerald-100: #e1f8c0;
+  --color-emerald-200: #c2f082;
+  --color-emerald-300: #9be43e;
+  --color-emerald-400: #76b900;
+  --color-emerald-500: #639d00;
+  --color-emerald-600: #4d7c00;
+  --color-emerald-700: #3c6100;
+  --color-emerald-800: #2c4700;
+  --color-emerald-900: #1e3100;
+  --color-emerald-950: #101b00;
+
+  /* NVIDIA Matte Carbon & Gunmetal Neutral Scale */
+  --color-slate-50: #f8f9f7;
+  --color-slate-100: #f0f2ee;
+  --color-slate-200: #e2e5df;
+  --color-slate-300: #cbd0c7;
+  --color-slate-400: #9ca398;
+  --color-slate-500: #6e756a;
+  --color-slate-600: #50564d;
+  --color-slate-700: #353933;
+  --color-slate-750: #2a2e29;
+  --color-slate-800: #222521;
+  --color-slate-850: #191b18;
+  --color-slate-900: #131512;
+  --color-slate-950: #0a0b09;
+}
+
+/* Custom sleek scrollbar for data tables and MSA tracks */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0b09;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f4ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262a24;
+  border-radius: 3px;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #c5ccc0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #76b900;
+}
+
+/* ==========================================================================
+   NVIDIA DARK MODE CARBON & ACID GREEN SURFACE SYSTEM
+   Remaps deep blue-navy hex containers to NVIDIA matte carbon & gunmetal
+   ========================================================================== */
+
+body {
+  background-color: #0a0b09;
+  color: #e5e7e3;
+}
+
+.bg-\[\#060913\],
+.bg-\[\#050812\] {
+  background-color: #0a0b09 !important;
+}
+
+.bg-\[\#0a0e17\],
+.bg-\[\#0a0e17\]\/95,
+.bg-\[\#0a0e17\]\/80,
+.bg-\[\#090d16\],
+.bg-\[\#090d17\],
+.bg-\[\#090d18\],
+.bg-\[\#090e1c\] {
+  background-color: #10120f !important;
+}
+
+.bg-\[\#0b101d\],
+.bg-\[\#0b101c\],
+.bg-\[\#0b101e\],
+.bg-\[\#0c1220\],
+.bg-\[\#0c1222\],
+.bg-\[\#0d1322\],
+.bg-\[\#0e1424\],
+.bg-\[\#101524\],
+.bg-\[\#0e1526\],
+.bg-\[\#0f1424\],
+.bg-\[\#0f1422\],
+.bg-\[\#101728\],
+.bg-\[\#090e1a\],
+.bg-\[\#0d1424\],
+.bg-\[\#0d1320\],
+.bg-\[\#101726\],
+.bg-\[\#070a12\],
+.bg-\[\#080b14\],
+.bg-\[\#0a1526\] {
+  background-color: #151814 !important;
+}
+
+/* Inner wells, input capsules, code bars & table tracks */
+.bg-\[\#070b14\],
+.bg-\[\#070b13\],
+.bg-\[\#080c14\],
+.bg-\[\#080d19\],
+.bg-\[\#080d18\],
+.bg-\[\#080d17\] {
+  background-color: #0c0e0b !important;
+}
+
+.bg-\[\#0f172a\]\/95 {
+  background-color: rgba(18, 21, 17, 0.96) !important;
+}
+
+.bg-\[\#0f172a\] {
+  background-color: #121511 !important;
+}
+
+/* Remap cyan glow shadows to NVIDIA Green (#76B900 -> rgb(118, 185, 0)) */
+[class*="shadow-[0_0_"] {
+  --tw-shadow-color: rgba(118, 185, 0, 0.35);
+}
+
+/* ==========================================================================
+   LIGHT MODE DESIGN SYSTEM: NVIDIA ENTERPRISE LIGHT & GREEN ACCENTS
+   ========================================================================== */
+
+.light {
+  color-scheme: light;
+}
+
+/* Base surface containers */
+.light body {
+  background-color: #f6f8f5 !important;
+  color: #111410 !important;
+}
+
+/* Dark page and panel backgrounds mapped to clean whites & soft slates */
+.light .bg-\[\#060913\],
+.light .bg-\[\#050812\] {
+  background-color: #f6f8f5 !important;
+  color: #111410 !important;
+}
+
+.light .bg-\[\#0a0e17\],
+.light .bg-\[\#0a0e17\]\/95,
+.light .bg-\[\#0a0e17\]\/80,
+.light .bg-\[\#090d16\],
+.light .bg-\[\#090d17\],
+.light .bg-\[\#090d18\],
+.light .bg-\[\#090e1c\] {
+  background-color: #ffffff !important;
+  border-color: #dde2d8 !important;
+  color: #111410 !important;
+}
+
+.light .bg-\[\#0b101d\],
+.light .bg-\[\#0b101c\],
+.light .bg-\[\#0b101e\],
+.light .bg-\[\#0c1220\],
+.light .bg-\[\#0c1222\],
+.light .bg-\[\#0d1322\],
+.light .bg-\[\#0e1424\],
+.light .bg-\[\#101524\],
+.light .bg-\[\#0e1526\],
+.light .bg-\[\#0f1424\],
+.light .bg-\[\#0f1422\],
+.light .bg-\[\#101728\],
+.light .bg-\[\#090e1a\],
+.light .bg-\[\#0d1424\],
+.light .bg-\[\#0d1320\],
+.light .bg-\[\#101726\],
+.light .bg-\[\#070a12\],
+.light .bg-\[\#080b14\],
+.light .bg-\[\#0a1526\] {
+  background-color: #ffffff !important;
+  border-color: #dde2d8 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Inner wells, input capsules, code bars & table tracks */
+.light .bg-\[\#070b14\],
+.light .bg-\[\#070b13\],
+.light .bg-\[\#080c14\],
+.light .bg-\[\#080d19\],
+.light .bg-\[\#080d18\],
+.light .bg-\[\#080d17\] {
+  background-color: #f6f8f5 !important;
+  border-color: #c8d0c2 !important;
+}
+
+/* Border slate mappings in light mode */
+.light .border-slate-850,
+.light .border-slate-800,
+.light .border-slate-800\/90,
+.light .border-slate-800\/80,
+.light .border-slate-800\/70,
+.light .border-slate-750,
+.light .border-slate-700 {
+  border-color: #dde2d8 !important;
+}
+
+/* High contrast text hierarchy */
+.light .text-slate-100,
+.light .text-slate-200 {
+  color: #111410 !important;
+}
+
+.light .text-slate-300 {
+  color: #1f241d !important;
+}
+
+.light .text-slate-400 {
+  color: #4a5246 !important;
+}
+
+.light .text-slate-500 {
+  color: #646d60 !important;
+}
+
+.light .text-slate-600 {
+  color: #8b9486 !important;
+}
+
+/* Scientific accent colors tuned for NVIDIA Green legibility on light surfaces */
+.light .text-cyan-200,
+.light .text-cyan-300 {
+  color: #3f6600 !important;
+}
+
+.light .text-cyan-400 {
+  color: #4f7d00 !important;
+}
+
+.light .text-emerald-300,
+.light .text-emerald-400 {
+  color: #3c6100 !important;
+}
+
+.light .text-amber-300,
+.light .text-amber-400 {
+  color: #b45309 !important;
+}
+
+.light .text-purple-300,
+.light .text-purple-400 {
+  color: #6b21a8 !important;
+}
+
+.light .text-rose-300,
+.light .text-rose-400 {
+  color: #be123c !important;
+}
+
+.light .text-blue-400 {
+  color: #4f7d00 !important;
+}
+
+/* Badges, button chips and interactive pills in light mode */
+.light .bg-slate-900,
+.light .bg-slate-900\/80,
+.light .bg-slate-900\/70,
+.light .bg-slate-900\/60,
+.light .bg-slate-900\/40,
+.light .bg-slate-850,
+.light .bg-slate-800 {
+  background-color: #eff2ed !important;
+  color: #1f241d !important;
+  border-color: #c8d0c2 !important;
+}
+
+.light .hover\:bg-slate-800:hover,
+.light .hover\:bg-slate-700:hover {
+  background-color: #e2e7df !important;
+  color: #111410 !important;
+}
+
+.light .bg-cyan-950,
+.light .bg-cyan-950\/80,
+.light .bg-cyan-950\/70,
+.light .bg-cyan-950\/60,
+.light .bg-cyan-950\/50,
+.light .bg-cyan-950\/40 {
+  background-color: #eefce0 !important;
+  color: #3a5c00 !important;
+  border-color: #a7e84b !important;
+}
+
+.light .bg-emerald-950,
+.light .bg-emerald-950\/80,
+.light .bg-emerald-950\/70,
+.light .bg-emerald-950\/60,
+.light .bg-emerald-950\/40 {
+  background-color: #eefce0 !important;
+  color: #3a5c00 !important;
+  border-color: #a7e84b !important;
+}
+
+.light .bg-purple-950,
+.light .bg-purple-950\/80,
+.light .bg-purple-950\/60,
+.light .bg-purple-950\/40 {
+  background-color: #f3e8ff !important;
+  color: #6b21a8 !important;
+  border-color: #d8b4fe !important;
+}
+
+.light .bg-amber-950,
+.light .bg-amber-950\/80,
+.light .bg-amber-950\/60,
+.light .bg-amber-950\/40 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+.light .bg-rose-950,
+.light .bg-rose-950\/80,
+.light .bg-rose-950\/60,
+.light .bg-rose-950\/50,
+.light .bg-rose-950\/40 {
+  background-color: #ffe4e6 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+}
+
+.light .bg-blue-950,
+.light .bg-blue-950\/50 {
+  background-color: #eefce0 !important;
+  color: #3a5c00 !important;
+  border-color: #a7e84b !important;
+}
+
+/* Input fields, select dropdowns & textareas in light mode */
+.light input,
+.light select,
+.light textarea {
+  background-color: #ffffff !important;
+  color: #111410 !important;
+  border-color: #c8d0c2 !important;
+}
+
+.light input:focus,
+.light select:focus,
+.light textarea:focus {
+  border-color: #76b900 !important;
+  box-shadow: 0 0 0 2px rgba(118, 185, 0, 0.2) !important;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #8b9486 !important;
+}
+
+.light select option {
+  background-color: #ffffff !important;
+  color: #111410 !important;
+}
+
+/* Modals and overlay backdrops */
+.light .bg-black\/80,
+.light .bg-black\/75,
+.light .bg-black\/70 {
+  background-color: rgba(17, 20, 16, 0.45) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* Light mode tables */
+.light table th {
+  background-color: #f6f8f5 !important;
+  color: #2c3229 !important;
+  border-color: #dde2d8 !important;
+}
+
+.light table td {
+  border-color: #dde2d8 !important;
+}
+
+.light table tbody tr:hover {
+  background-color: #f6f8f5 !important;
+}
+
+/* High-glow shadows softened for clean daylight readability */
+.light [class*="shadow-[0_0_"] {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.light [class*="shadow-[0_4px_30px"],
+.light [class*="shadow-[0_2px_16px"] {
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* MacBook Dock sequence strip and popup balloon in light mode */
+.light .ring-offset-slate-950 {
+  --tw-ring-offset-color: #ffffff !important;
+}
+
+.light .bg-\[\#0f172a\]\/95 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: #76b900 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light .bg-\[\#0f172a\] {
+  background-color: #ffffff !important;
+}
+
+/* SVG Chart lines in light mode */
+.light line[stroke="#1e293b"],
+.light line[stroke="#222521"] {
+  stroke: #dde2d8 !important;
+}
+
+.light line[stroke="#475569"],
+.light line[stroke="#50564d"] {
+  stroke: #8b9486 !important;
+}

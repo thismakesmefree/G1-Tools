@@ -1,11 +1,5 @@
-<div align="center">
+High-throughput bioinformatics and computational genomics workbench featuring NCBI BLAST+, Multiple Sequence Alignment, Cladogram Phylogenetic Trees, I-Mutant ΔΔG Free Energy, and GEO2R Transcriptomic Profiling.
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Engineered Jaivik Tool a high-performance computational genomics and structural biophysics suite that seamlessly connects sequence level genetics, 3D AlphaFold structural modeling, mutation thermodynamics, and AI-driven clinical insights in a unified dark-mode workspace.
 
-  <h1>Built with AI Studio</h2>
-
-  <p>The fastest path from prompt to production with Gemini.</p>
-
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+Access at: https://jaiviktool.ai.studio
